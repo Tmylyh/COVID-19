@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dj7-CC-rLf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--风险地区-->
+        <scene sceneID="szi-Mq-Gh5">
+            <objects>
+                <viewController id="8w6-JX-v3J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FBo-88-vqI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uvJ-lc-HBg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="风险地区" image="location" catalog="system" selectedImage="location.fill" id="NaC-e9-lxr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66P-rb-U06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="276"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="PNG-cv-3xd">
+            <objects>
+                <viewController id="VB0-pA-soc" customClass="Home" customModule="Convenience_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Jx-Wa-8Qx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-f5-XsW">
+                                <rect key="frame" x="20" y="44" width="394" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="便民服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARi-xI-ONa">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="235" id="adJ-re-1SG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BKK-Pr-IdT">
+                                        <rect key="frame" x="295" y="8.5" width="99" height="10.5"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="1uv-7m-EaG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OFX-2J-D3F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w1d-f5-XsW" firstAttribute="top" secondItem="OFX-2J-D3F" secondAttribute="top" id="Xfh-bP-TfF"/>
+                            <constraint firstItem="w1d-f5-XsW" firstAttribute="leading" secondItem="OFX-2J-D3F" secondAttribute="leading" constant="20" id="p3f-Bc-mTQ"/>
+                            <constraint firstItem="OFX-2J-D3F" firstAttribute="trailing" secondItem="w1d-f5-XsW" secondAttribute="trailing" id="zIh-JH-VfK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="house" catalog="system" selectedImage="house.fill" id="KJ2-10-svN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBa-wg-ox9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010.144927536232" y="-331.47321428571428"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="9xU-X5-ptW">
+            <objects>
+                <tabBarController id="dj7-CC-rLf" customClass="HomeViewController" customModule="Convenience_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s6c-c2-we6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VB0-pA-soc" kind="relationship" relationship="viewControllers" id="QyQ-kt-8Wd"/>
+                        <segue destination="8w6-JX-v3J" kind="relationship" relationship="viewControllers" id="z60-J8-uRP"/>
+                        <segue destination="Wbw-yB-nZL" kind="relationship" relationship="viewControllers" id="Q8j-mz-nTq"/>
+                        <segue destination="CPK-rW-DkM" kind="relationship" relationship="viewControllers" id="tgZ-dM-qmI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qhf-BD-9Sj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="-136"/>
+        </scene>
+        <!--出行政策-->
+        <scene sceneID="Oxh-fo-bBo">
+            <objects>
+                <viewController id="Wbw-yB-nZL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tzo-ej-hmR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZNI-Va-Hsh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="出行政策" image="book" catalog="system" selectedImage="book.fill" id="YCj-jZ-B39"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXy-Cx-azp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="968"/>
+        </scene>
+        <!--核酸检测-->
+        <scene sceneID="dt8-hz-w0s">
+            <objects>
+                <viewController id="CPK-rW-DkM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="24V-C1-cTc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zBr-XJ-SpB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="核酸检测" image="medical.thermometer" selectedImage="medical.thermometer.fill" id="hrG-6K-UOs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2c6-9a-Zw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="1672"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="medical.thermometer" width="21.5" height="21.5"/>
+        <image name="medical.thermometer.fill" width="21" height="21.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
