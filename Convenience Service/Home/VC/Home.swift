@@ -11,6 +11,7 @@ import SwiftyJSON
 import SnapKit
 import Kingfisher
 
+
 class Home: UIViewController {
 
     let images = [UIImage(named: "p700-300-1"),
@@ -25,18 +26,20 @@ class Home: UIViewController {
         cycleView1.placeholderImage = #imageLiteral(resourceName: "placeholder")
         cycleView1.scrollDirection = .horizontal
         cycleView1.delegate = self
-
+        cycleView1.reloadItemsCount(images.count)
         cycleView1.itemZoomScale = 1.2
         cycleView1.itemSpacing = 10
         cycleView1.initialIndex = 1
         cycleView1.isAutomatic = true
         cycleView1.timeInterval = 2
 //        cycleView1.isInfinite = false
-        cycleView1.itemSize = CGSize(width: width - 50, height: width - 100)
+        cycleView1.itemSize = CGSize(width: width - 50, height: (width - 150) / 1.3)
         return cycleView1
     }()
+
+   
     
-    
+    var news: NewsModel?
     let imagewhile = imageWhile()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,7 @@ class Home: UIViewController {
                             let decoder = JSONDecoder()
                             decoder.keyDecodingStrategy = .convertFromSnakeCase
                              let news = try decoder.decode(NewsModel.self, from: newsData)
+                            self.news = news
                             //print(news.result.data)
                             for i in 0..<7{
                                 //print(item)
@@ -75,7 +79,7 @@ class Home: UIViewController {
         view.addSubview(cycleView1)
         cycleView1.snp.makeConstraints {
             $0.left.equalTo(10)
-            $0.top.equalTo(70)
+            $0.top.equalTo(30)
             $0.right.equalTo(-10)
             $0.height.equalTo(cycleView1.snp.width)
         }
@@ -92,6 +96,15 @@ extension Home: ZCycleViewProtocol{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
       
         cell.imageView.kf.setImage(with: imagewhile.images[realIndex])
+//        cell.imageView.image = images[realIndex]
+        cell.label.font = .systemFont(ofSize: 16)
+        cell.label.numberOfLines = 0
+        cell.label.textAlignment = .left
+        cell.label.adjustsFontSizeToFitWidth = true
+        if let text = news?.result.data[realIndex].title{
+            cell.label.text = text}else{
+                cell.label.text = "李跃行今天学会了snapkit"
+            }
         return cell
     }
     
