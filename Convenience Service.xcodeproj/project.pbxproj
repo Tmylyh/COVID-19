@@ -21,6 +21,8 @@
 		04AE90C328B75E8500695AD4 /* ZPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90C028B75E8500695AD4 /* ZPageControl.swift */; };
 		04AE90C528B7627300695AD4 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90C428B7627300695AD4 /* CustomCollectionViewCell.swift */; };
 		04AE90C828B76FAF00695AD4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90C728B76FAF00695AD4 /* Home.swift */; };
+		04AE90CA28B7DFF700695AD4 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90C928B7DFF700695AD4 /* function.swift */; };
+		04AE90CC28B7E28E00695AD4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90CB28B7E28E00695AD4 /* TableViewCell.swift */; };
 		F6F8626B90604BF67286652A /* Pods_Convenience_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B458351FFB2B84BF7D43227A /* Pods_Convenience_Service.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		04AE90C028B75E8500695AD4 /* ZPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPageControl.swift; sourceTree = "<group>"; };
 		04AE90C428B7627300695AD4 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		04AE90C728B76FAF00695AD4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		04AE90C928B7DFF700695AD4 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
+		04AE90CB28B7E28E00695AD4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		6872543D49E883516C439154 /* Pods-Convenience Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convenience Service.release.xcconfig"; path = "Target Support Files/Pods-Convenience Service/Pods-Convenience Service.release.xcconfig"; sourceTree = "<group>"; };
 		B458351FFB2B84BF7D43227A /* Pods_Convenience_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convenience_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAFAEE09D45765ED4BD53B0 /* Pods-Convenience Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convenience Service.debug.xcconfig"; path = "Target Support Files/Pods-Convenience Service/Pods-Convenience Service.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		043929D028B6A066004387DA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04AE90C928B7DFF700695AD4 /* function.swift */,
 				04AE90C628B7627700695AD4 /* cell */,
 				043929D428B6A26B004387DA /* Model */,
 				043929D328B6A263004387DA /* VC */,
@@ -106,8 +111,8 @@
 		043929D328B6A263004387DA /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				043929D128B6A088004387DA /* HomeViewController.swift */,
 				04AE90C728B76FAF00695AD4 /* Home.swift */,
+				043929D128B6A088004387DA /* HomeViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				04AE90C428B7627300695AD4 /* CustomCollectionViewCell.swift */,
+				04AE90CB28B7E28E00695AD4 /* TableViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AE90CC28B7E28E00695AD4 /* TableViewCell.swift in Sources */,
 				043929D228B6A088004387DA /* HomeViewController.swift in Sources */,
 				04AE90C528B7627300695AD4 /* CustomCollectionViewCell.swift in Sources */,
 				04AE90C328B75E8500695AD4 /* ZPageControl.swift in Sources */,
@@ -281,6 +288,7 @@
 				04AE90C228B75E8500695AD4 /* ZCycleLayout.swift in Sources */,
 				043929C228B69B86004387DA /* Convenience_Service.xcdatamodeld in Sources */,
 				043929BA28B69B86004387DA /* SceneDelegate.swift in Sources */,
+				04AE90CA28B7DFF700695AD4 /* function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

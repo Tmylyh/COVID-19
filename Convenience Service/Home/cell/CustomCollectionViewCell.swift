@@ -15,7 +15,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         imageView.frame = contentView.bounds
        // label.frame = CGRect(x: 50, y: 20, width: 200, height: 100)
         
-        label.backgroundColor = .brown
+       // label.backgroundColor = .white
         contentView.addSubview(imageView)
         contentView.addSubview(label)
         label.snp.makeConstraints { make in
@@ -27,7 +27,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
            // make.bottom.equalTo(20)
             make.left.equalTo(60)
             make.width.equalTo(200)
-            make.height.equalTo(30)
+            make.height.equalTo(37)
         }
     }
 
