@@ -36,8 +36,10 @@ struct detail:Codable{
 // MARK: - 轮播图中的图片
 class imageWhile {
     var images: [URL] = []
+    var title: [String] = []
 }
 
 class imageTableView {
     var images: [URL] = []
+    var title: [String] = []
 }

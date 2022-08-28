@@ -15,7 +15,10 @@ class HomeViewController: UITabBarController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let home = HomeViewController()
+//        home.selectedIndex = 0
+        
+        
     }
     
    

@@ -13,6 +13,9 @@ import Kingfisher
 
 
 class Home: UIViewController {
+    
+    var whileIndex: [Int] = []
+    var tableIndex: [Int] = []
 
     let images = [UIImage(named: "p700-300-1"),
                   UIImage(named: "p700-300-2"),
@@ -27,7 +30,7 @@ class Home: UIViewController {
         cycleView1.placeholderImage = #imageLiteral(resourceName: "placeholder")
         cycleView1.scrollDirection = .horizontal
         cycleView1.delegate = self
-        cycleView1.reloadItemsCount(images.count)
+        cycleView1.reloadItemsCount(7)
         cycleView1.itemZoomScale = 1.2
         cycleView1.itemSpacing = 10
         cycleView1.initialIndex = 1
@@ -48,7 +51,17 @@ class Home: UIViewController {
     let imageTable = imageTableView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.layer.cornerRadius = 20
+        //设置圆角
+        //let bound = CGRect(x: tableView.bounds.minX, y: tableView.bounds.minY, width: tableView.bounds.width, height: tableView.bounds.height * 10)
+//        let path = UIBezierPath(roundedRect: bound,
+//                                byRoundingCorners:[.topRight, .topLeft],
+//                                cornerRadii: CGSize(width: 20, height:  20))
+//
+//        let maskLayer = CAShapeLayer()
+//
+//        maskLayer.path = path.cgPath
+//        tableView.layer.mask = maskLayer
+       // tableView.layer.cornerRadius = 20
         Request()
         view.addSubview(cycleView1)
         cycleView1.snp.makeConstraints {
@@ -79,7 +92,9 @@ extension Home: ZCycleViewProtocol{
         cell.label.adjustsFontSizeToFitWidth = true
         if let text = news?.result.data[realIndex].title{
             cell.imageView.kf.setImage(with: imagewhile.images[realIndex])
-            cell.label.text = text}else{
+            cell.label.text = imagewhile.title[realIndex]
+            
+        }else{
                 cell.label.text = "李跃行今天学会了snapkit"
             }
         return cell
@@ -106,11 +121,11 @@ extension Home:UITableViewDelegate, UITableViewDataSource{
         cell.labelTable.numberOfLines = 0
         cell.labelTable.adjustsFontSizeToFitWidth = true
         cell.labelTable.text = "我曾把完整的镜子打碎，夜晚的枕头都是眼泪，我多想过去重来，再给我一次机会"
-        if let label = news?.result.data[indexPath.row + 7].title{
-            cell.labelTable.text = label
+       // if let label = news?.result.data[indexPath.row + 7].title{
+            cell.labelTable.text = imageTable.title[indexPath.row]
             cell.imageTable.kf.setImage(with: imageTable.images[indexPath.row])
           //  cell.imageTable.contentMode = .scaleAspectFit
-        }
+        //}
         
 //        if let image = news?.result.data[indexPath.row + 7].thumbnail_pic_s{
 //            cell.imageTable.kf.setImage(with: image)

@@ -8,21 +8,96 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--风险地区-->
+        <!--疫情风险地区-->
         <scene sceneID="szi-Mq-Gh5">
             <objects>
-                <viewController id="8w6-JX-v3J" sceneMemberID="viewController">
+                <viewController id="8w6-JX-v3J" customClass="DangerViewController" customModule="Convenience_Service" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FBo-88-vqI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-jc-O7g">
+                                <rect key="frame" x="102" y="111" width="312" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="510-Lj-bf0"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" id="DxR-Tc-AL4" customClass="TableViewCell2" customModule="Convenience_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="312" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DxR-Tc-AL4" id="zlN-bd-9C7">
+                                            <rect key="frame" x="0.0" y="0.0" width="312" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8w6-JX-v3J" id="BmQ-fv-iS8"/>
+                                    <outlet property="delegate" destination="8w6-JX-v3J" id="smG-0f-Wye"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="疫情风险地区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-pK-vi0">
+                                <rect key="frame" x="20" y="61" width="146" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nWz-5z-qAi">
+                                <rect key="frame" x="0.0" y="111" width="102" height="702"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCellID" id="HEJ-fT-gy3" customClass="CategoryCell" customModule="Convenience_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="102" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HEJ-fT-gy3" id="ETa-FL-gOg">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风险区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STI-Bp-6cu">
+                                                    <rect key="frame" x="25" y="11.5" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="STI-Bp-6cu" firstAttribute="centerX" secondItem="ETa-FL-gOg" secondAttribute="centerX" id="SMn-Y1-OND"/>
+                                                <constraint firstItem="STI-Bp-6cu" firstAttribute="centerY" secondItem="ETa-FL-gOg" secondAttribute="centerY" id="gan-ET-WMV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="textlabel" destination="STI-Bp-6cu" id="NLM-Fj-S0W"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uvJ-lc-HBg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.96463125940000005" blue="0.96019428969999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nWz-5z-qAi" firstAttribute="bottom" secondItem="uvJ-lc-HBg" secondAttribute="bottom" id="65h-s6-ADB"/>
+                            <constraint firstItem="cYm-jc-O7g" firstAttribute="leading" secondItem="nWz-5z-qAi" secondAttribute="trailing" id="9ap-wT-FsL"/>
+                            <constraint firstItem="yb6-pK-vi0" firstAttribute="top" secondItem="uvJ-lc-HBg" secondAttribute="top" constant="17" id="9xE-XN-xwH"/>
+                            <constraint firstItem="cYm-jc-O7g" firstAttribute="top" secondItem="yb6-pK-vi0" secondAttribute="bottom" constant="21" id="Zxq-DO-xCM"/>
+                            <constraint firstItem="nWz-5z-qAi" firstAttribute="top" secondItem="yb6-pK-vi0" secondAttribute="bottom" constant="21" id="aPh-cf-DHV"/>
+                            <constraint firstItem="yb6-pK-vi0" firstAttribute="leading" secondItem="uvJ-lc-HBg" secondAttribute="leading" constant="20" id="bbt-Tk-fwb"/>
+                            <constraint firstItem="uvJ-lc-HBg" firstAttribute="bottom" secondItem="cYm-jc-O7g" secondAttribute="bottom" id="lcJ-6V-sxN"/>
+                            <constraint firstItem="cYm-jc-O7g" firstAttribute="trailing" secondItem="uvJ-lc-HBg" secondAttribute="trailing" id="tug-gn-4mY"/>
+                            <constraint firstItem="nWz-5z-qAi" firstAttribute="leading" secondItem="uvJ-lc-HBg" secondAttribute="leading" id="wrS-Mz-2h3"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="风险地区" image="location" catalog="system" selectedImage="location.fill" id="NaC-e9-lxr"/>
+                    <tabBarItem key="tabBarItem" title="风险地区" image="location" catalog="system" selectedImage="location.fill" id="Gbn-nO-eYh"/>
+                    <navigationItem key="navigationItem" title="疫情风险地区" id="0Mj-eD-oT2"/>
+                    <connections>
+                        <outlet property="CategoryTableView" destination="nWz-5z-qAi" id="eM1-4c-bkm"/>
+                        <outlet property="TableView2" destination="cYm-jc-O7g" id="Pbw-TN-0DT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66P-rb-U06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="276"/>
+            <point key="canvasLocation" x="1495.6521739130435" y="296.65178571428572"/>
         </scene>
         <!--首页-->
         <scene sceneID="PNG-cv-3xd">
@@ -91,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBa-wg-ox9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010.144927536232" y="-331.47321428571428"/>
+            <point key="canvasLocation" x="1920.289855072464" y="-331.47321428571428"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="9xU-X5-ptW">
@@ -108,7 +183,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="VB0-pA-soc" kind="relationship" relationship="viewControllers" id="QyQ-kt-8Wd"/>
-                        <segue destination="8w6-JX-v3J" kind="relationship" relationship="viewControllers" id="z60-J8-uRP"/>
+                        <segue destination="8w6-JX-v3J" kind="relationship" relationship="viewControllers" id="u8V-5g-DQe"/>
                         <segue destination="Wbw-yB-nZL" kind="relationship" relationship="viewControllers" id="Q8j-mz-nTq"/>
                         <segue destination="CPK-rW-DkM" kind="relationship" relationship="viewControllers" id="tgZ-dM-qmI"/>
                     </connections>
@@ -160,6 +235,9 @@
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="medical.thermometer" width="21.5" height="21.5"/>
         <image name="medical.thermometer.fill" width="21" height="21.5"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

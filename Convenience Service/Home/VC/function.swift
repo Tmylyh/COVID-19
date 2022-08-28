@@ -14,6 +14,7 @@ let newsApiKey1 = "9417547417f4a43a945b6ed4b467c917"
 let newsApiKey2 = "c624f80fda6dcc7701845509a8c75482"
 
 extension Home{
+    
 func Request(){
     AF.request("http://v.juhe.cn/toutiao/index?type=top&key=\(newsApiKey1)").responseJSON { response in
                 if let data = response.value{
@@ -30,27 +31,33 @@ func Request(){
                          let news = try decoder.decode(NewsModel.self, from: newsData)
                         self.news = news
                         //print(news.result.data)
-                        for i in 0..<7{
+                        for i in 0..<10{
                             //print(item)
                             if URL(string: newsJSON["result","data",i,"thumbnail_pic_s"].stringValue) == nil{
                                 continue
                             }else{
                                 let image = newsJSON["result","data",i,"thumbnail_pic_s"].stringValue
+                                let title = newsJSON["result","data",i,"title"].stringValue
                                 self.imagewhile.images.append(URL(string: image)!)
+                                self.imagewhile.title.append(title)
+                                self.whileIndex.append(i)
                             }
                         }
-                        for i in 7..<30{
+                        for i in 10..<30{
                             if URL(string: newsJSON["result","data",i,"thumbnail_pic_s"].stringValue) == nil{
                                 continue
                             }else{
                                 let image = newsJSON["result","data",i,"thumbnail_pic_s"].stringValue
+                                let title = newsJSON["result","data",i,"title"].stringValue
                                 self.imageTable.images.append(URL(string: image)!)
+                                self.imageTable.title.append(title)
+                                self.whileIndex.append(i)
                             }
                         }
                         self.cycleView1.reloadItemsCount(self.imagewhile.images.count)
                         self.cycleView1.reloadInputViews()
                         self.tableView.reloadData()
-                        print(self.imagewhile.images)
+                        //print(self.imagewhile.images)
                     }catch{
                         print(error)
                     }
