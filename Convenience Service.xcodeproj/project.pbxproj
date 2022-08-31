@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041DB39428BE0B740039B97E /* getCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DB39328BE0B740039B97E /* getCity.swift */; };
+		041DB39628BE0BA90039B97E /* cityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DB39528BE0BA90039B97E /* cityModel.swift */; };
 		043929B828B69B86004387DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929B728B69B86004387DA /* AppDelegate.swift */; };
 		043929BA28B69B86004387DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929B928B69B86004387DA /* SceneDelegate.swift */; };
-		043929BC28B69B86004387DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929BB28B69B86004387DA /* ViewController.swift */; };
 		043929BF28B69B86004387DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043929BD28B69B86004387DA /* Main.storyboard */; };
 		043929C228B69B86004387DA /* Convenience_Service.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043929C028B69B86004387DA /* Convenience_Service.xcdatamodeld */; };
 		043929C428B69B87004387DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043929C328B69B87004387DA /* Assets.xcassets */; };
 		043929C728B69B87004387DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043929C528B69B87004387DA /* LaunchScreen.storyboard */; };
 		043929D228B6A088004387DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929D128B6A088004387DA /* HomeViewController.swift */; };
 		043929D628B6A2B3004387DA /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929D528B6A2B3004387DA /* HomeModel.swift */; };
+		044A5CF728BCAC81004318AD /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5CF628BCAC81004318AD /* TravelViewController.swift */; };
+		044A5CFB28BCB051004318AD /* Travel Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5CFA28BCB051004318AD /* Travel Model.swift */; };
+		044A5CFD28BCB398004318AD /* function3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5CFC28BCB398004318AD /* function3.swift */; };
+		044A5D0228BDAFD2004318AD /* AcidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5D0128BDAFD2004318AD /* AcidViewController.swift */; };
+		044A5D0528BDAFF3004318AD /* function4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5D0428BDAFF3004318AD /* function4.swift */; };
+		044A5D0828BDE99A004318AD /* AcidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5D0728BDE99A004318AD /* AcidModel.swift */; };
+		044A5D0A28BDF0F9004318AD /* AcidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5D0928BDF0F9004318AD /* AcidTableViewCell.swift */; };
 		04AE90C128B75E8500695AD4 /* ZCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90BE28B75E8500695AD4 /* ZCycleView.swift */; };
 		04AE90C228B75E8500695AD4 /* ZCycleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90BF28B75E8500695AD4 /* ZCycleLayout.swift */; };
 		04AE90C328B75E8500695AD4 /* ZPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE90C028B75E8500695AD4 /* ZPageControl.swift */; };
@@ -34,10 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041DB39328BE0B740039B97E /* getCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCity.swift; sourceTree = "<group>"; };
+		041DB39528BE0BA90039B97E /* cityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityModel.swift; sourceTree = "<group>"; };
 		043929B428B69B86004387DA /* Convenience Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Convenience Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		043929B728B69B86004387DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043929B928B69B86004387DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043929BB28B69B86004387DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		043929BE28B69B86004387DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		043929C128B69B86004387DA /* Convenience_Service.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Convenience_Service.xcdatamodel; sourceTree = "<group>"; };
 		043929C328B69B87004387DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +54,13 @@
 		043929C828B69B87004387DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043929D128B6A088004387DA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		043929D528B6A2B3004387DA /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		044A5CF628BCAC81004318AD /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
+		044A5CFA28BCB051004318AD /* Travel Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Travel Model.swift"; sourceTree = "<group>"; };
+		044A5CFC28BCB398004318AD /* function3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function3.swift; sourceTree = "<group>"; };
+		044A5D0128BDAFD2004318AD /* AcidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcidViewController.swift; sourceTree = "<group>"; };
+		044A5D0428BDAFF3004318AD /* function4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function4.swift; sourceTree = "<group>"; };
+		044A5D0728BDE99A004318AD /* AcidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcidModel.swift; sourceTree = "<group>"; };
+		044A5D0928BDF0F9004318AD /* AcidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcidTableViewCell.swift; sourceTree = "<group>"; };
 		04AE90BE28B75E8500695AD4 /* ZCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCycleView.swift; sourceTree = "<group>"; };
 		04AE90BF28B75E8500695AD4 /* ZCycleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCycleLayout.swift; sourceTree = "<group>"; };
 		04AE90C028B75E8500695AD4 /* ZPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPageControl.swift; sourceTree = "<group>"; };
@@ -99,9 +115,10 @@
 			children = (
 				043929B728B69B86004387DA /* AppDelegate.swift */,
 				043929B928B69B86004387DA /* SceneDelegate.swift */,
-				043929BB28B69B86004387DA /* ViewController.swift */,
 				043929BD28B69B86004387DA /* Main.storyboard */,
 				04AE90DD28BAF69B00695AD4 /* CategoryHeader.xib */,
+				044A5D0028BDAB3F004318AD /* Acid */,
+				044A5CF528BCAC2D004318AD /* Travel */,
 				04AE90CD28B8AEE000695AD4 /* Danger */,
 				043929D028B6A066004387DA /* Home */,
 				04AE90BD28B75E8500695AD4 /* Source */,
@@ -139,6 +156,69 @@
 				043929D528B6A2B3004387DA /* HomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		044A5CF528BCAC2D004318AD /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				044A5CF928BCB024004318AD /* VC */,
+				044A5CF828BCB015004318AD /* Model */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		044A5CF828BCB015004318AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044A5CFA28BCB051004318AD /* Travel Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044A5CF928BCB024004318AD /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				044A5CF628BCAC81004318AD /* TravelViewController.swift */,
+				044A5CFC28BCB398004318AD /* function3.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		044A5D0028BDAB3F004318AD /* Acid */ = {
+			isa = PBXGroup;
+			children = (
+				044A5D0B28BDF0FF004318AD /* Cell */,
+				044A5D0628BDE983004318AD /* Model */,
+				044A5D0328BDAFDE004318AD /* VC */,
+			);
+			path = Acid;
+			sourceTree = "<group>";
+		};
+		044A5D0328BDAFDE004318AD /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				044A5D0128BDAFD2004318AD /* AcidViewController.swift */,
+				044A5D0428BDAFF3004318AD /* function4.swift */,
+				041DB39328BE0B740039B97E /* getCity.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		044A5D0628BDE983004318AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044A5D0728BDE99A004318AD /* AcidModel.swift */,
+				041DB39528BE0BA90039B97E /* cityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044A5D0B28BDF0FF004318AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				044A5D0928BDF0F9004318AD /* AcidTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		04AE90BD28B75E8500695AD4 /* Source */ = {
@@ -337,15 +417,23 @@
 				04AE90C528B7627300695AD4 /* CustomCollectionViewCell.swift in Sources */,
 				04AE90DC28BAD4A400695AD4 /* CategoryCell.swift in Sources */,
 				04AE90E028BAFAA600695AD4 /* CategoryHeader.swift in Sources */,
+				044A5D0228BDAFD2004318AD /* AcidViewController.swift in Sources */,
 				04AE90D828B8B88100695AD4 /* funchtion2.swift in Sources */,
+				044A5CFB28BCB051004318AD /* Travel Model.swift in Sources */,
 				04AE90C328B75E8500695AD4 /* ZPageControl.swift in Sources */,
+				041DB39628BE0BA90039B97E /* cityModel.swift in Sources */,
 				04AE90C828B76FAF00695AD4 /* Home.swift in Sources */,
-				043929BC28B69B86004387DA /* ViewController.swift in Sources */,
 				043929D628B6A2B3004387DA /* HomeModel.swift in Sources */,
+				044A5D0828BDE99A004318AD /* AcidModel.swift in Sources */,
 				04AE90C128B75E8500695AD4 /* ZCycleView.swift in Sources */,
+				044A5D0A28BDF0F9004318AD /* AcidTableViewCell.swift in Sources */,
 				043929B828B69B86004387DA /* AppDelegate.swift in Sources */,
+				041DB39428BE0B740039B97E /* getCity.swift in Sources */,
+				044A5CF728BCAC81004318AD /* TravelViewController.swift in Sources */,
+				044A5D0528BDAFF3004318AD /* function4.swift in Sources */,
 				04AE90C228B75E8500695AD4 /* ZCycleLayout.swift in Sources */,
 				043929C228B69B86004387DA /* Convenience_Service.xcdatamodeld in Sources */,
+				044A5CFD28BCB398004318AD /* function3.swift in Sources */,
 				043929BA28B69B86004387DA /* SceneDelegate.swift in Sources */,
 				04AE90DA28B93B6700695AD4 /* DangerousModel.swift in Sources */,
 				04AE90CA28B7DFF700695AD4 /* function.swift in Sources */,
@@ -496,6 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 473U56HQ9L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Convenience Service/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -524,6 +613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 473U56HQ9L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Convenience Service/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

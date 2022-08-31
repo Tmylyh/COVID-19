@@ -46,6 +46,9 @@ class DangerViewController: UIViewController {
 }
 
 extension DangerViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    
+    
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          if tableView == CategoryTableView{
              return 2
@@ -113,6 +116,7 @@ extension DangerViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        TableView2.deselectRow(at: indexPath, animated: true)
         if tableView == CategoryTableView{
             TableView2.scrollToRow(at: IndexPath(row: 0, section: indexPath.row), at: .top, animated: true)
             
