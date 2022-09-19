@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041D2D7C28D5A69800D0833D /* questionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2D7B28D5A69800D0833D /* questionViewController.swift */; };
+		041D2D7E28D5B45900D0833D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2D7D28D5B45900D0833D /* Question.swift */; };
+		041D2D8028D5B4D100D0833D /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2D7F28D5B4D100D0833D /* ProgressHUD.swift */; };
+		041D2D8428D7771D00D0833D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2D8328D7771D00D0833D /* WebViewController.swift */; };
 		041DB39428BE0B740039B97E /* getCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DB39328BE0B740039B97E /* getCity.swift */; };
 		041DB39628BE0BA90039B97E /* cityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DB39528BE0BA90039B97E /* cityModel.swift */; };
+		041DB39828C07EA10039B97E /* PolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DB39728C07EA10039B97E /* PolicyTableViewCell.swift */; };
+		041DB39B28C07F180039B97E /* Policy2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DB39A28C07F180039B97E /* Policy2TableViewCell.swift */; };
 		043929B828B69B86004387DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929B728B69B86004387DA /* AppDelegate.swift */; };
 		043929BA28B69B86004387DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043929B928B69B86004387DA /* SceneDelegate.swift */; };
 		043929BF28B69B86004387DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043929BD28B69B86004387DA /* Main.storyboard */; };
@@ -42,8 +48,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041D2D7B28D5A69800D0833D /* questionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionViewController.swift; sourceTree = "<group>"; };
+		041D2D7D28D5B45900D0833D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		041D2D7F28D5B4D100D0833D /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		041D2D8328D7771D00D0833D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		041DB39328BE0B740039B97E /* getCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCity.swift; sourceTree = "<group>"; };
 		041DB39528BE0BA90039B97E /* cityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityModel.swift; sourceTree = "<group>"; };
+		041DB39728C07EA10039B97E /* PolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyTableViewCell.swift; sourceTree = "<group>"; };
+		041DB39A28C07F180039B97E /* Policy2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Policy2TableViewCell.swift; sourceTree = "<group>"; };
 		043929B428B69B86004387DA /* Convenience Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Convenience Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		043929B728B69B86004387DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043929B928B69B86004387DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041DB39928C07EAC0039B97E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				041DB39728C07EA10039B97E /* PolicyTableViewCell.swift */,
+				041DB39A28C07F180039B97E /* Policy2TableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		043929AB28B69B86004387DA = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +167,9 @@
 				04AE90C928B7DFF700695AD4 /* function.swift */,
 				04AE90C728B76FAF00695AD4 /* Home.swift */,
 				043929D128B6A088004387DA /* HomeViewController.swift */,
+				041D2D7B28D5A69800D0833D /* questionViewController.swift */,
+				041D2D7F28D5B4D100D0833D /* ProgressHUD.swift */,
+				041D2D8328D7771D00D0833D /* WebViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -161,6 +185,7 @@
 		044A5CF528BCAC2D004318AD /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				041DB39928C07EAC0039B97E /* cell */,
 				044A5CF928BCB024004318AD /* VC */,
 				044A5CF828BCB015004318AD /* Model */,
 			);
@@ -236,6 +261,7 @@
 			children = (
 				04AE90C428B7627300695AD4 /* CustomCollectionViewCell.swift */,
 				04AE90CB28B7E28E00695AD4 /* TableViewCell.swift */,
+				041D2D7D28D5B45900D0833D /* Question.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -411,7 +437,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AE90D628B8B66900695AD4 /* TableViewCell2.swift in Sources */,
+				041D2D8428D7771D00D0833D /* WebViewController.swift in Sources */,
 				04AE90CC28B7E28E00695AD4 /* TableViewCell.swift in Sources */,
+				041D2D8028D5B4D100D0833D /* ProgressHUD.swift in Sources */,
 				04AE90D128B8B09000695AD4 /* DangerViewController.swift in Sources */,
 				043929D228B6A088004387DA /* HomeViewController.swift in Sources */,
 				04AE90C528B7627300695AD4 /* CustomCollectionViewCell.swift in Sources */,
@@ -423,8 +451,10 @@
 				04AE90C328B75E8500695AD4 /* ZPageControl.swift in Sources */,
 				041DB39628BE0BA90039B97E /* cityModel.swift in Sources */,
 				04AE90C828B76FAF00695AD4 /* Home.swift in Sources */,
+				041D2D7E28D5B45900D0833D /* Question.swift in Sources */,
 				043929D628B6A2B3004387DA /* HomeModel.swift in Sources */,
 				044A5D0828BDE99A004318AD /* AcidModel.swift in Sources */,
+				041DB39B28C07F180039B97E /* Policy2TableViewCell.swift in Sources */,
 				04AE90C128B75E8500695AD4 /* ZCycleView.swift in Sources */,
 				044A5D0A28BDF0F9004318AD /* AcidTableViewCell.swift in Sources */,
 				043929B828B69B86004387DA /* AppDelegate.swift in Sources */,
@@ -433,10 +463,12 @@
 				044A5D0528BDAFF3004318AD /* function4.swift in Sources */,
 				04AE90C228B75E8500695AD4 /* ZCycleLayout.swift in Sources */,
 				043929C228B69B86004387DA /* Convenience_Service.xcdatamodeld in Sources */,
+				041D2D7C28D5A69800D0833D /* questionViewController.swift in Sources */,
 				044A5CFD28BCB398004318AD /* function3.swift in Sources */,
 				043929BA28B69B86004387DA /* SceneDelegate.swift in Sources */,
 				04AE90DA28B93B6700695AD4 /* DangerousModel.swift in Sources */,
 				04AE90CA28B7DFF700695AD4 /* function.swift in Sources */,
+				041DB39828C07EA10039B97E /* PolicyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

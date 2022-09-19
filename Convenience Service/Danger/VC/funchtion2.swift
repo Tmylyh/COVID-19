@@ -11,7 +11,7 @@ import SwiftyJSON
 import Kingfisher
 
 let dangerApiKey1 = "8d5d3b91d6db3c50b0f3e96bdc022c05"
-
+let dangerApiKey2 = "7ac51264c8c41debcfb021d373d9405c"
 extension DangerViewController{
     func Request(){
         AF.request("http://apis.juhe.cn/springTravel/risk?key=\(dangerApiKey1)").responseJSON { request in

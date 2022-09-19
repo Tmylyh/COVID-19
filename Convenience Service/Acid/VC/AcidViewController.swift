@@ -17,11 +17,13 @@ class AcidViewController: UIViewController {
     @IBOutlet weak var AcidTableView: UITableView!
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var button1: UIButton!
     var cityinfomation: CityModel1?
     var cityIDandName: [String:String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        button1.layer.cornerRadius = 10
         RequestCity()
         searchText.becomeFirstResponder()
         searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)

@@ -24,6 +24,10 @@ class DangerViewController: UIViewController {
     
     var TableView2CurrentContentOffsetY: CGFloat = 0//用于判断上滑下滑
     
+    override func viewWillLayoutSubviews() {
+        Request()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         CategoryTableView.sectionHeaderTopPadding = 0
@@ -37,7 +41,7 @@ class DangerViewController: UIViewController {
         
         CategoryTableView.delegate = self
         CategoryTableView.dataSource = self
-        Request()
+        
         CategoryTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .none)
         // Do any additional setup after loading the view.
     }

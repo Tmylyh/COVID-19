@@ -38,8 +38,10 @@ func Request(){
                             }else{
                                 let image = newsJSON["result","data",i,"thumbnail_pic_s"].stringValue
                                 let title = newsJSON["result","data",i,"title"].stringValue
+                                let url = newsJSON["result","data",i,"url"].url
                                 self.imagewhile.images.append(URL(string: image)!)
                                 self.imagewhile.title.append(title)
+                                self.imagewhile.url.append(url!)
                                 self.whileIndex.append(i)
                             }
                         }
@@ -49,8 +51,10 @@ func Request(){
                             }else{
                                 let image = newsJSON["result","data",i,"thumbnail_pic_s"].stringValue
                                 let title = newsJSON["result","data",i,"title"].stringValue
+                                let url = newsJSON["result","data",i,"url"].url
                                 self.imageTable.images.append(URL(string: image)!)
                                 self.imageTable.title.append(title)
+                                self.imageTable.url.append(url!)
                                 self.whileIndex.append(i)
                             }
                         }

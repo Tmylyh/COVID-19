@@ -22,3 +22,18 @@ struct citys: Codable{
     let city_id: String
     let city: String
 }
+
+// MARK: - 出行政策
+
+struct policy: Codable{
+    let result: result6
+}
+
+struct result6: Codable{
+    let from_info: po
+    let to_info: po
+}
+
+struct po: Codable{
+    let low_in_desc: String
+}

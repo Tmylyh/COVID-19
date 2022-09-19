@@ -37,9 +37,11 @@ struct detail:Codable{
 class imageWhile {
     var images: [URL] = []
     var title: [String] = []
+    var url: [URL] = []
 }
 
 class imageTableView {
     var images: [URL] = []
     var title: [String] = []
+    var url: [URL] = []
 }

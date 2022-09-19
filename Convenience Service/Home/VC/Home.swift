@@ -51,6 +51,8 @@ class Home: UIViewController {
     let imageTable = imageTableView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let button = UIButton(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
+        button.addTarget(self, action: #selector(change), for: .touchUpInside)
         //设置圆角
         //let bound = CGRect(x: tableView.bounds.minX, y: tableView.bounds.minY, width: tableView.bounds.width, height: tableView.bounds.height * 10)
 //        let path = UIBezierPath(roundedRect: bound,
@@ -71,7 +73,10 @@ class Home: UIViewController {
             $0.height.equalTo(cycleView1.snp.width)
         }
     }
-
+    @objc func change(){
+        let vc = questionViewController()
+        self.present(vc, animated: true)
+    }
 }
 
 // MARK: - 轮播图
@@ -110,6 +115,12 @@ extension Home: ZCycleViewProtocol{
         pageControl.pageIndicatorTintColor = .darkGray
         pageControl.frame = CGRect(x: 0, y: cycleView.bounds.height-25, width: cycleView.bounds.width, height: 25)
     }
+    
+    func cycleViewDidSelectedIndex(_ cycleView: ZCycleView, index: Int) {
+        let webVc = WebViewController()
+        webVc.url = imagewhile.url[index]
+        present(webVc, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TableView
@@ -139,12 +150,16 @@ extension Home:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return imageTable.images.count
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.bounds.width - 270
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let webVc = WebViewController()
+        webVc.url = imageTable.url[indexPath.row]
+        present(webVc, animated: true, completion: nil)
     }
     
 }
